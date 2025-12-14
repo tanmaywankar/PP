@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    
+</head>
+<body>
+    <div class="cover">
+        <div class="txbx">
+            <input type="text" class = "ans" name="answer" id="calculation">
+        </div>
+        <div class="btnlyt">
+            <button onclick="appendno(7)">7</button>
+            <button onclick="appendno(8)">8</button>
+            <button onclick="appendno(9)">9</button>
+            <button onclick="operation('*')">X</button>
+            <button onclick="appendno(4)">4</button>
+            <button onclick="appendno(5)">5</button>
+            <button onclick="appendno(6)">6</button>
+            <button onclick="operation('-')">-</button>
+            <button onclick="appendno(1)">1</button>
+            <button onclick="appendno(2)">2</button>
+            <button onclick="appendno(3)">3</button>
+            <button onclick="operation('+')">+</button>
+            <button onclick="zeroing()">clr</button>
+            <button onclick="appendno(0)">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="operation('/')">%</button>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
