@@ -222,7 +222,26 @@ background-color: #64b1ff;
 }
 .total{
     margin-left: 15px;
-    background-color: #d9bcff;
+    /* background-color: #d9bcff; */
     padding: 10px;
     border-radius: 5px;
+}
+.tax{
+    font-size: 12px;
+    font-family: serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.checkbtn{
+    margin-right: 20px;
+    background-color:#ffb638;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    user-select: none;
+    pointer-events: auto;
+}
+.checkbtn:active{
+    background-color: #3e216b;
+    color: #f4edfc;
 }

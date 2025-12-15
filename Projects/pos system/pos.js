@@ -12,8 +12,7 @@ let cart =[];
 const container = document.getElementById('product-container');
  const cartContainer = document.getElementById('cart-top');
   const cartContainerBottom = document.getElementById('cart-bottom');
-
-
+window.onload = addCart();
 
 function addproduct(products){
     const cardHTML = `
@@ -66,10 +65,16 @@ function addCart(){
 
     if(cart.length>0){
         document.getElementById("total").innerHTML=`${total}`;
+        let checkbtn = document.getElementById("checkbtn");
+         checkbtn.style.pointerEvents="auto";
+         checkbtn.style.backgroundColor = "";
         
     }
     else{
          document.getElementById("total").innerHTML=`0`;
+         checkbtn.style.pointerEvents="none";
+         checkbtn.style.backgroundColor = "#5f5f5f";
+
     }
 
 
@@ -118,4 +123,6 @@ if(existingItem.quantity<1){
 
 addCart();
 }
+
+
 product.forEach(addproduct);
