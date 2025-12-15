@@ -48,7 +48,6 @@ function addCart(){
     let itemTotal = item.price * item.quantity;
     total += itemTotal;
     const html = `
-    <div class="cartTop">
      <div class="cart-item">
                 <div class="cart-info">
                     <p class="prodname">${item.name}</p>
@@ -64,7 +63,6 @@ function addCart(){
                 </div>
             </div>
             
-    </div>
     `;
     cartContainer.innerHTML += html;
 
