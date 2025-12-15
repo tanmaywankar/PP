@@ -12,13 +12,8 @@ let cart =[];
 const container = document.getElementById('product-container');
  const cartContainer = document.getElementById('cart-container');
 
-function emptie(){
 
-    if(cart.length==0){
-        cartContainer.innerHTML += '<p class = "ns"> Nothing To See Here Click the + icon to get started!</p>';
-        
-    }
-}
+
 function addproduct(products){
     const cardHTML = `
     <div class="card">
@@ -68,6 +63,16 @@ function addCart(){
 
  });
 
+    if(cart.length>0){
+        cartContainer.innerHTML += `<div class = "checkout">
+        <p class="total"> Total: ₹${total.toFixed(2)}</p>   
+        <p class="checkbtn"> Checkout </p> 
+        </div>
+        `;
+        
+    }
+
+
 }
 
 
@@ -112,7 +117,5 @@ if(existingItem.quantity<1){
 }
 
 addCart();
-emptie();
 }
-emptie();
 product.forEach(addproduct);
