@@ -22,7 +22,7 @@ body{
     grid-template-rows: repeat(4);
     padding: 10px;
     justify-content: center;
-    align-content: center;
+    align-content: flex-start;
     justify-items: center;
     background-color: #f5ecff;
     overflow-y: scroll;
@@ -30,7 +30,7 @@ body{
 
 .card{
     width: 180px;
-    height: 200px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,16 +277,44 @@ background-color: #64b1ff;
     position: fixed;
     bottom: 12vh;
     right: 25px;
-    border: 3px solid #000;
     user-select: none;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 15px;
+    font-family: "Roboto mono", monospace;
+    color: #fff;
     cursor: pointer;
     padding: 15px;
-    background-color: #ff8b99;
-    border-radius: 50%;
+    background-color: #ff2740;
+    border-radius: 30px;
 }
 
 .deleteAll:active{
-background-color: #f3a7ff;
+background-color: #e226ff;
+}
+.deleteAll:hover{
+    border: 3px solid #282828;
+    padding: 12px;
+}
+
+/* scrollbar experimental all gemini code here */
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* The track (background) */
+::-webkit-scrollbar-track {
+    background: #f0e2ff; /* Light lavender to match your theme */
+    border-radius: 4px;
+}
+
+/* The thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+    background: #d2b0ff; /* Darker purple */
+    border-radius: 4px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background: #a041ff; /* Bright purple when clicked/hovered */
 }
