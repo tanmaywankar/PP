@@ -190,11 +190,26 @@ function renderProducts(productList){
 renderProducts(product);
 
 const searchInput = document.getElementById('searchInput');
+const clearBtn = document.getElementById('clearBtn');
 searchInput.addEventListener('input',function(e){
     const searchText = e.target.value.toLowerCase();
+    if (searchText.length > 0) {
+        clearBtn.classList.add('active');
+    } else {
+        clearBtn.classList.remove('active');
+    }
 
     const filteredList = product.filter(function(item){
         return item.name.toLowerCase().includes(searchText);
     });
     renderProducts(filteredList);
+});
+
+clearBtn.addEventListener('click', function() {
+
+    searchInput.value = '';
+
+    clearBtn.classList.remove('active');
+
+    renderProducts(product);
 });
